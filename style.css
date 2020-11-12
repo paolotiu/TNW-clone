@@ -1,0 +1,141 @@
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    box-sizing: border-box;
+    color: white;
+    display: grid;
+    grid-template-rows: 32px 48px;
+}
+
+/* Global nav */
+
+.navbar li {
+    cursor: pointer;
+    margin: 0 4px;
+    display: inline;
+}
+
+/* Logo */
+.logo {
+    display: none;
+    background-color: black;
+    grid-row: span 2;
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+/* Top side of navbar */
+.main-nav {
+    font-size: 0.8em;
+
+    background-color: black;
+    height: 100%;
+
+    line-height: 32px;
+}
+
+.main-nav {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.main-nav li:hover {
+    color: white;
+}
+
+.main-nav-links > li:first-child {
+    color: white;
+}
+
+.main-nav-links {
+    padding-left: 20px;
+}
+
+.right-nav-links {
+    margin-right: 20px;
+    float: right;
+}
+
+/* Bottom side of nav */
+
+.nav-topics {
+    padding-left: 20px;
+    height: 100%;
+    line-height: 48px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.search,
+.hamburger {
+    float: right;
+    height: 100%;
+    border-left: 1px solid rgba(170, 170, 170, 0.226);
+}
+
+.search > button,
+.hamburger > button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 20px;
+    width: 44px;
+    height: 100%;
+    position: relative;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-topics > .hamburger {
+    display: none;
+}
+/* Announcements bar */
+.announcements {
+    padding: 8px 10px;
+    background-color: #fd3;
+    font-size: 0.825em;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        box-sizing: border-box;
+        color: white;
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        grid-template-rows: 32px 48px;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .announcements {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width: 784px) {
+    .navbar {
+        grid-template-rows: 48px;
+    }
+    .main-nav {
+        display: none;
+    }
+
+    .right-nav-links {
+        display: none;
+    }
+
+    .nav-topics-links {
+        display: none;
+    }
+
+    .nav-topics > .hamburger {
+        display: inline;
+    }
+}
